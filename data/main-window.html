@@ -5,13 +5,19 @@
     <link rel=stylesheet type="text/css" href="main-window.css">
 </head>
 <body>
-    <div id="canvas-container">
+    <div id=top-toolbar class=toolbar>
+        <select id=window-selector></select>
+    </div>
+    <div id=canvas-container>
         <canvas id=canvas></canvas>
     </div>
-    <div id=toolbar>
-        <select id=window-selector></select>
+    <div id=bottom-toolbar class=toolbar>
+        <div id=potential-fps-display class=fps-display>
+            Potential: &mdash; fps
+        </div>
+        <div id=actual-fps-display class=fps-display>Actual: &mdash; fps</div>
         <div id=least-fps-display class=fps-display>Min: &mdash; fps</div>
-        <div id=fps-display class=fps-display>Now: &mdash; fps</div>
+        <div id=spacer></div>
         <button id=clear-button><img src="cross.gif" alt="X"></button>
         <div id=resizer-container><div id=resizer></div></div>
     </div>
