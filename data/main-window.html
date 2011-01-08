@@ -19,11 +19,26 @@
         <div id=least-fps-display class=fps-display>Min: &mdash; fps</div>
         <div id=spacer></div>
         <button id=pause-button class=button><img id=pause-button-image
-            src="pause.gif" alt="Pause"></button>
+            class=button-image src="pause.gif" alt="Pause"></button>
         <button id=clear-button class=button><img src="cross.gif"
-            alt="Close"></button>
-        <div id=resizer-container><div id=resizer></div></div>
+            class=button-image alt="Close"></button>
     </div>
+    <div id=profiling-header>
+        <button id=profiling-disclosure><img id=profiling-disclosure-image
+            class=button-image src="arrow_collapse.gif" alt="Expand">
+            Profiling
+        </button>
+    </div>
+    <div id=profiling-group class=hidden>
+        <div><button id=start-shark-button>Start Profiling</button></div>
+        <div id=auto-stop-profiler-group class=disabled>
+            <input id=auto-stop-profiler-button type=checkbox disabled>
+            When the frame rate drops below
+            <input id=profiling-threshold type=text size=2 value="20" disabled>
+            fps, stop Shark automatically
+        </div>
+    </div>
+    <div id=resizer></div>
 </body>
 </html>
 

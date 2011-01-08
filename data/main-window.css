@@ -8,6 +8,16 @@ html {
     height: 100%;
     margin: 0;
     padding: 0;
+    overflow: hidden;
+    -moz-user-select: -moz-none;
+    cursor: default;
+}
+
+html,
+.button,
+#profiling-disclosure,
+#profiling-threshold {
+    font: 10px "Lucida Grande", "Segoe UI", Tahoma, sans-serif;
 }
 
 body {
@@ -26,7 +36,8 @@ body {
 #canvas {
 }
 
-.toolbar {
+.toolbar,
+#profiling-header {
     display: -moz-box;
     -moz-box-orient: horizontal;
     -moz-box-flex: 0;
@@ -46,35 +57,72 @@ body {
 
 .fps-display {
     padding: 2px 6px 0;
-    -moz-user-select: none;
-    cursor: default;
 }
 
-.button {
+.button,
+#profiling-disclosure {
     background: none;
     border: none;
     padding: 0;
+    color: #ffffff;
+}
+
+.button {
     margin: auto 3px;
+}
+
+.button > .button-image,
+#profiling-disclosure > .button-image {
     opacity: 0.7;
 }
 
-.button:hover {
+.button:hover > .button-image,
+#profiling-disclosure:hover > .button-image,
+#profiling-disclosure:active > .button-image {
     opacity: 1.0;
+}
+
+#profiling-group {
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-flex: 0;
+    margin: 6px 0 0 12px;
+    -moz-transition-property: all;
+    -moz-transition-duration: 300ms;
+    opacity: 1.0;
+}
+
+#profiling-group.hidden {
+    position: absolute;
+    bottom: 0;
+    opacity: 0.0;
+    z-index: -1;
+    margin: 6px 0 0 12px;
+}
+
+.disabled {
+    color: GrayText;
+}
+
+#profiling-threshold {
+    margin: 0;
+    padding: 0;
+    -moz-user-select: text;
 }
 
 .button:active {
     background-color: white;
 }
 
-#resizer-container {
-    display: -moz-box;
-    -moz-box-orient: vertical;
-    -moz-box-pack: center;
+.label {
+    padding: 1px 3px;
 }
 
 #resizer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
     -moz-appearance: resizer;
-    -moz-box-flex: 0;
 }
 
 #spacer {
