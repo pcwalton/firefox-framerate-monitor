@@ -33,30 +33,30 @@ body {
     -moz-box-flex: 1;
 }
 
-#canvas {
-}
-
-.toolbar,
+#bottom-toolbar,
 #profiling-header {
     display: -moz-box;
     -moz-box-orient: horizontal;
     -moz-box-flex: 0;
-}
-
-#bottom-toolbar {
     border-top: 1px solid #404040;
 }
 
 #window-selector {
-    -moz-box-flex: 1;
     background-color: #000000;
     color: #ffffff;
     border: none;
-    min-width: 0;
+    width: 100%;
+}
+
+#fps-display-area {
+    display: block;
+    padding: 2px 0;
+    -moz-box-flex: 1;
 }
 
 .fps-display {
-    padding: 2px 6px 0;
+    padding: 0 6px;
+    white-space: nowrap;
 }
 
 .button,
@@ -123,9 +123,5 @@ body {
     right: 0;
     bottom: 0;
     -moz-appearance: resizer;
-}
-
-#spacer {
-    -moz-box-flex: 1;
 }
 
