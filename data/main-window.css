@@ -118,10 +118,3 @@ body {
     padding: 1px 3px;
 }
 
-#resizer {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    -moz-appearance: resizer;
-}
-
