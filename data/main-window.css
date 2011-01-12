@@ -29,8 +29,16 @@ body {
 }
 
 #canvas-container {
-    display: -moz-box;
+    position: relative;
+    display: block;
     -moz-box-flex: 1;
+}
+
+#overlay-canvas,
+#canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 #bottom-toolbar,
